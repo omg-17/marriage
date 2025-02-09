@@ -23,5 +23,22 @@
     <div class="regards">-Malhar Thakar & Pooja Joshi</div>
     </div>
     </div>
+    <button onclick="shareContent()">Share This Page</button>
+
+<script>
+function shareContent() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Check this out!',
+      text: 'Here is an awesome website you need to see!',
+      url: window.location.href
+    })
+    .then(() => console.log('Successfully shared'))
+    .catch((error) => console.log('Error sharing:', error));
+  } else {
+    alert('Sharing not supported on this browser.');
+  }
+}
+</script>
 </body>
 </html>
