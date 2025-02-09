@@ -10,10 +10,6 @@
     <div class="navbar">
         <img src="./marriage-name.png" class="mrlogo">
     </div>
-    <div class="share">
-        <button onclick="shareContent()" class="sharebutton"><img src="./share.png"></button>
-        <p class="share-text">Share</p>
-        </div>
     <div class="main-align">
     <div class="align-embed">
         <div class="note">
@@ -27,20 +23,5 @@
     <div class="regards">-Malhar Thakar & Pooja Joshi</div>
     </div>
     </div>
-    <script>
-    function shareContent() {
-      if (navigator.share) {
-        navigator.share({
-          title: 'Malhar Thakar and Pooja Joshi',
-          text: 'Experience the grand Wedding Virtually',
-          url: window.location.href
-        })
-        .then(() => console.log('Successfully shared'))
-        .catch((error) => console.log('Error sharing:', error));
-      } else {
-        alert('Sharing not supported on this browser.');
-      }
-    }
-    </script>
 </body>
 </html>
